@@ -1,0 +1,251 @@
+
+simulide 0.3.12
+
+
+New Features:
+  RC1:
+    - Show Circuit Time and Mcu freq.
+    - Show Led polarity.
+    - Show Meters polarity.
+    - MCU freq. decimal values.
+    - Chip/Logic_Symbol for subcircuits.
+
+  RC2:
+    - Bjt BC diode.
+    - Bjt faster switch.
+    - multi-channel plotter, resizable scale.
+    - Wave gen. frequency decimal values.
+    - Oscope improved.
+    - Windows OS console output.
+    - Remove selected connectors.
+    - Auto-connect pins.
+    - Add short info to Component names.
+    - Refactoring Bus: Fully analogic bidirectional Buses.
+    
+  RC3:
+    - Bus start Bit.
+    - Debugger GcBasic Step Over (experimental).
+    - File Browser: Show hidden.
+    - File Browser: Settings bookmark.
+    - Graphic Package creation.
+    - Ramtable case insensitive.
+    - 74 IC Logic Symbols.
+  
+  SR1:
+    - CD IC Logic Symbols.
+    - Help widget.
+    - Some help files.
+    - Ramtable: 4 cols: Name, Type, Dec.Value, Value.
+    - GcBasic: Strings in RamTable
+    - Smaller Gates.
+    - MCU EEPROM persistence (to .simu File).
+    - Load/Save MCU EEPROM Data to data file.
+    - Add persistence to RAM = PROM (to .simu File).
+    - Resizable RAM/PROM ( address bits and word size ).
+    - Load/Save RAM/PROM Data to data file.
+    - Add persistence to I2C RAM = I2C PROM (to .simu File).
+    - Load/Save I2C RAM/PROM Data to data file.
+    - Auto-Backup and Restore Circuit after Crash.
+    - Property to set Auto-Backup check interval( Secs ).
+    
+  SR2:
+  
+  SR3:
+    - Led shape to original, but displaced to Cathode.
+    *- 16 bit Encoder/Decoder
+    
+  SR4:
+    - Circuit Zoom with key sequence: Ctrl+ Ctrl-
+    - Serial Terminal: "Clear" and "CR" buttons.
+    - New Dialog: create and edit Package Pins.
+    - Create Subcircuit and Package files in one shot.
+  
+Bug Fixes:
+  RC1:
+    - Avoid closing document while debugging.
+    - Modification in circuit while debugging or simulating MCUs.
+    - Atmega8 not working.
+    - LM555 power pins.
+    - LM555 in subcircuits.
+    - Wrong voltage in "PNP biasing" example.
+    - Avoid program blocking in "End" GcBasic statement while debugging.
+
+  RC2:
+    - Switches not properly removed.
+    - Wrong voltage in "PNP biasing" example final fix.
+    - Avoid program blocking simulating AVR entering "sleep".
+    - Wave gen. frequency accuracy.
+    - Wrong Circuit Time.
+    - Delete SR04 while running may crash.
+    - GcBasic arrays errors in RamTable.
+    - Crash setting mcu logic symbol=true.
+    - Remove unintended components when removing single wire.
+    - Crash removing Arduino in some cases (related to built-in led pin).
+    - Problem in RamTable with variables changed in source code.
+
+  RC3:
+    - Plotter crashing randomly.
+    - ResistorDip in Subcircuits.
+    - Wire Lines disconnected in some cases.
+    - Animate circuit resets after copy/paste.
+    - Copy unintended components if previously selected.
+    - Clock in subcircuits.
+    - RamTable may crash when not debugging.
+    - Filter file types in open dialogs.
+    - Debugger fully interruptable.
+    - AVR and PIC assemblers not found msg.
+    - Adding led while circuit is running (wrong start step).
+    - Some missing icons.
+    - Relay: crash in changes when circuit running.
+    - Keypad: crash in changes when circuit running.
+    - LedMatrix: properties reset at size change.
+    - 7segment: color reset at size change.
+    - Subcircuit: error not cleared when package not found.
+    - Volt. Reg: voltage not updated until circuit restart.
+  
+  SR1:
+    - Current Source initialization after restart.
+    - 555 CV pin wrong impedance.
+    - 555 not cleanly removed.
+    - Values with units in SubCircuits: wrong value.
+    - Clock in SubCircuit not cleanly removed. 
+    - Weird lines in connectors: Moving+Undo connectors with leght=0.
+    - Uppercase asm instructions not recognized.
+    - Crash compiling Pic asm with filenames containing spaces.
+    - Import Circuit fails in some cases.
+    - Pin Id changes not properly updated ( find pin by name fails ).
+    - Bus: wrong bit0.
+    - Editor: crash unindenting block with empty lines.
+    - RAM/ROM wrong write cycle start in some cases.
+    - I2C RAM: 1 byte address devices not working.
+    - Simulation very slow with large circuits if animated.
+    - Copy/Paste not working between simulide instances.
+    
+  SR2:
+    - Crash starting new connector with circuit running and animated( 0.3.12-SR1 ).
+    - Plotter randomly not working: Simulator update Counter not cleared.
+    - Shapes not properly redrawn on size changes.
+    - Id labels not well positioned in some components.
+    - Wrong Cursor in New connector.
+    - Closing Connector: end point bad position sometimes.
+    
+  SR3:
+    - Crash hovering some external object over circuit canvas.
+    - Circuit not updating properly when animated( 0.3.12-SR1 ).
+    - Changes in Logic Devices properties while simulation running not updated.
+    - Load Circuit: avoid connect to already connected pins.
+    - Make 74HC and 74XX interchangeable.
+    - BJT animation not updated.
+    - BJT not working in vco example (0.3.12-RC2).
+    - Fix some memory leaks.
+    - Plotterwidget wrong scale in some cases.
+    - 74HC4022 Logic Symbol not working.
+    
+  SR4:
+    - Pic asm Compiler: gpasm does not find includes in project folder.
+    - Time widget scrollBars shown in some systems.
+    - Executable detected as shared lib in some builds.
+    - AVR timer mode 14: Fast PWM, Top=ICR1, doesn't update in OCRX changes.
+    - Send Text in Serial monitor limited to 50 characters.
+    - ATtinyX4 wrong Pin asignation in Timer0,1.
+    - ATtinyX4 wrong ADC definition.
+    - Use Chip Symbol if Logic Symbol file not found.
+    - Package should save file relative path, not absolute.
+    - Create Subcircuit taking Component Circuit Id instead of unique Id.
+    - Avoid dash "-" in Subcircuits Pin Ids.
+    - Avoid save Backup in read only filesystems.
+    - Subcircuits fixed (thanks to Sergey Roenko):
+        74HC42, 74HC74, 74HC75, 74HC151, 74HC155, 74HC192, 74HC93
+        74HC393, 74HC592, 74HC4017, 74HC4026, 74HC4033
+    
+  SR5:
+    - I2C module: wrong output impedance when transmiting.
+    - Editor: closing unsaved doc + cancel not working.
+    - Editor: close unsaved doc whith no focus, editor takes the focused one.
+    - PIC with OSCCAL Reg. not working if call 0x3FF is made.
+    - Crash: Debug session + Close doc. + RamTable->LoadVAriables.
+    - AVR SPI: MOSI pin should be high when idle.
+    - Wrong extension Creating subcircuits in some cases.
+    - Ground not working in Subcircuits.
+    - Crash creating Subcircuit with 2 Package Pins connected together.
+    - Subcircuits fixed (Sergey Roenko strikes again)
+        74HC73, 74HC76, 74HC107, 74HC109, 74HC112,74HC113, 74HC173
+        74HC175, 74HC259, 74HC279, 74HC373, 74HC374, 74HC375, 74HC377
+        
+  SR6:
+    - Circuits from 0.4.13: Try to position elements in grid.
+    - Crash closing file with debugger when no mcu ( 0.3.12-SR5 ).
+    - PIC: if PIC goes to sleep fail to exit sleep afther reset.
+    - Crash setting MCU to logic Symbol (No LS available for MCU yet).
+    - Crash on some actions while creating connector.
+    - Audio Out latency too high.
+    - LatchD randomly not properly initialized.
+
+  SR7:
+    - Editor: Sintax highlight error parsing some rules.
+    - Oscope not updating when signal dissapears.
+    - Fixed 74HC194_LS.package (Sergey Roenko)
+    
+  SR8:
+    - Stepper: bounding box overlaping pins.
+    - Stepper not updating after change steps number.
+    - Arduino 1.8.10 issue solved.
+    - AppImage tries to backup in Readonly FS.
+    - Some Help Files not Found.
+    - Some wrong error strings higlighted in Arduino Compile.
+    - Text Encoding errors.
+    - Missing file extension filters in Editor->SaveAs.
+    - Bad Led visualisation when cpu can not keep speed.
+    - Atmega 1280,1281, 2560, wrong package file.
+    - Crash if mcu can't be created + new circuit.
+    - Pic18F4420 missing data file.
+    
+New Components:
+  RC1:
+    - Pic:
+        12c508, 12c509, 12ce518, 12ce519, 16c84, 16c712, 16c716
+  RC2:
+    - Frequencimeter
+
+  RC3:
+    - Package
+    - 74HC74  refactored.
+    - 74HC148 refactored.
+
+  SR1:
+  SR2:
+  SR3:
+  SR4: 
+    - IC74 (thanks to Sergey Roenko)
+        74XX01, 74HC73, 74HC76, 74HC109, 74HC112, 74HC113, 74HC173
+        74HC175, 74HC259, 74HC373, 74HC374, 74HC375, 74HC377
+    
+  SR5:
+    - IC74 (Sergey Roenko strikes again)
+        74XX91, 74XX95, 74XX96, 74XX166, 74XX170, 74XX178, 74XX179
+        74XX195, 74XX198, 74XX199, 74HC670, 74XX381, 74XX382
+        
+  SR6:
+   - IC74 (Sergey Roenko)
+        74HC245, 74HC260, 74HC4094
+       
+    - ICCD (Sergey Roenko)
+        CD4006, CD4013, CD4014, CD4015, CD4021, CD4027, CD4035, CD4042, CD4043
+        CD4044, CD4076, CD4094, CD4095, CD4096, CD4099, CD4508, CD40174, CD40175
+
+  SR7:
+    - IC74 (Sergey Roenko)
+       74HC156, 74HC157, 74HC158, 74HC251, 74HC257, 74HC258, 74HC298, 74HC352
+       74HC353, 74HC354, 74HC356, 74HC4052, 74HC4053, 74HC4067
+       74XX150, 74XX582, 74XX583
+   
+    - ICCD (Sergey Roenko)
+        CD4019, CD4029, CD4066, CD4512, CD4532, CD4553
+        
+    - Keys (Sergey Roenko)
+        DG401, DG403, DG405
+        
+    - Ternary (Sergey Roenko)
+        Ternary_AND, Ternary_Buffer, Ternary_Multiplexer, Ternary_NAND
+        Ternary_NOR, Ternary_NOT. Ternary_OR
+        

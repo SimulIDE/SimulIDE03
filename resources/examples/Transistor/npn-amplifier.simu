@@ -1,0 +1,48 @@
+<circuit type="simulide_0.1" speed="1000000" animate="0" noLinAcc="5" noLinStep="10" reactStep="50">
+ 
+Probe-8: 
+<item hflip="1" Show_volt="true" id="Probe-8" Show_id="false" valLabelx="16" labelrot="45" labelx="16" vflip="1" PlotterCh="2" rotation="-45" x="-460" y="-300" valLabely="0" objectName="Probe-8" itemtype="Probe" labely="-16" valLabRot="45"/>
+ 
+Probe-7: 
+<item hflip="1" Show_volt="true" id="Probe-7" Show_id="false" valLabelx="16" labelrot="45" labelx="16" vflip="1" PlotterCh="1" rotation="-45" x="-332" y="-332" valLabely="0" objectName="Probe-7" itemtype="Probe" labely="-16" valLabRot="45"/>
+ 
+Resistor-6: 
+<item Unit=" kΩ" valLabelx="-16" y="-284" labelrot="0" valLabRot="0" Show_id="false" objectName="Resistor-6" hflip="1" id="Resistor-6" x="-412" itemtype="Resistor" labelx="-12" Resistance="2" valLabely="6" rotation="0" vflip="1" Show_res="true" labely="-24"/>
+ 
+WaveGen-5: 
+<item Unit=" mV" valLabelx="-16" y="-284" Running="true" labelrot="0" Quality="4" valLabRot="0" Wave_Type="0" Show_id="false" objectName="WaveGen-5" hflip="1" id="WaveGen-5" x="-516" itemtype="WaveGen" labelx="-64" valLabely="8" Voltage="500" Show_Volt="true" rotation="0" vflip="1" Volt_Base="0.69999999999999996" Freq="1" labely="-24" Duty_Square="50"/>
+ 
+Ground-4: 
+<item hflip="1" id="Ground-4" Show_id="false" valLabelx="0" labelrot="0" labelx="-16" vflip="1" rotation="0" x="-348" y="-172" valLabely="0" objectName="Ground-4" itemtype="Ground" labely="-24" valLabRot="0"/>
+ 
+Resistor-3: 
+<item Unit=" Ω" valLabelx="-16" y="-356" labelrot="0" valLabRot="0" Show_id="false" objectName="Resistor-3" hflip="1" id="Resistor-3" x="-348" itemtype="Resistor" labelx="-12" Resistance="100" valLabely="6" rotation="90" vflip="1" Show_res="true" labely="-24"/>
+ 
+Rail-2: 
+<item Unit=" V" valLabelx="-16" y="-412" labelrot="0" valLabRot="0" Show_id="false" objectName="Rail-2" hflip="1" id="Rail-2" x="-516" itemtype="Rail" labelx="-64" valLabely="8" Voltage="5" Show_Volt="true" rotation="0" vflip="1" labely="-24"/>
+ 
+BJT-1: 
+<item valLabelx="0" y="-284" labelrot="0" valLabRot="0" BC_diode="false" Show_id="false" Threshold="0.69999999999999996" objectName="BJT-1" hflip="1" id="BJT-1" x="-356" itemtype="BJT" PNP="false" labelx="-16" valLabely="0" rotation="0" vflip="1" Gain="100" labely="-24"/>
+ 
+Connector-9: 
+<item enodeid="Circ_eNode-10" valLabelx="0" y="-412" labelrot="0" pointList="-500,-412,-348,-412,-348,-372" valLabRot="0" Show_id="false" objectName="Connector-9" hflip="1" id="Connector-9" x="-500" itemtype="Connector" labelx="-16" valLabely="0" startpinid="Rail-2-outnod" rotation="0" vflip="1" labely="-24" endpinid="Resistor-3-lPin"/>
+ 
+Connector-11: 
+<item enodeid="Circ_eNode-12" valLabelx="0" y="-340" labelrot="0" pointList="-348,-340,-348,-300" valLabRot="0" Show_id="false" objectName="Connector-11" hflip="1" id="Connector-11" x="-348" itemtype="Connector" labelx="-16" valLabely="0" startpinid="Resistor-3-rPin" rotation="0" vflip="1" labely="-24" endpinid="BJT-1-collector"/>
+ 
+Connector-13: 
+<item enodeid="Circ_eNode-14" valLabelx="0" y="-188" labelrot="0" pointList="-348,-188,-348,-268" valLabRot="0" Show_id="false" objectName="Connector-13" hflip="1" id="Connector-13" x="-348" itemtype="Connector" labelx="-16" valLabely="0" startpinid="Ground-4-Gnd" rotation="0" vflip="1" labely="-24" endpinid="BJT-1-emiter"/>
+ 
+Connector-15: 
+<item enodeid="Circ_eNode-16" valLabelx="0" y="-284" labelrot="0" pointList="-500,-284,-428,-284" valLabRot="0" Show_id="false" objectName="Connector-15" hflip="1" id="Connector-15" x="-500" itemtype="Connector" labelx="-16" valLabely="0" startpinid="WaveGen-5-outnod" rotation="0" vflip="1" labely="-24" endpinid="Resistor-6-lPin"/>
+ 
+Connector-17: 
+<item enodeid="Circ_eNode-18" valLabelx="0" y="-284" labelrot="0" pointList="-396,-284,-372,-284" valLabRot="0" Show_id="false" objectName="Connector-17" hflip="1" id="Connector-17" x="-396" itemtype="Connector" labelx="-16" valLabely="0" startpinid="Resistor-6-rPin" rotation="0" vflip="1" labely="-24" endpinid="BJT-1-base"/>
+ 
+PlotterWidget-19: 
+<item childrenRect="" layoutDirection="0" acceptDrops="false" pos="" normalGeometry="" inputMethodHints="0" Scale="2" windowTitle="" minimized="false" palette="" MaxVolt="500" y="714" baseSize="" focus="false" minimumSizeHint="" maximumSize="" windowModified="false" visible="true" contextMenuPolicy="1" enabled="true" childrenRegion="" maximumWidth="1000" whatsThis="" frameGeometry="" isActiveWindow="true" width="1000" sizeIncrement="" size="" frameSize="" sizePolicy="" windowModality="0" updatesEnabled="true" maximized="false" locale="" toolTip="" objectName="PlotterWidget-19" itemtype="Plotter" autoFillBackground="false" fullScreen="false" minimumWidth="200" cursor="" geometry="" mouseTracking="false" windowIconText="" height="200" accessibleDescription="" sizeHint="" windowOpacity="1" toolTipDuration="-1" modal="false" statusTip="" windowFilePath="" styleSheet="" maximumHeight="200" accessibleName="" focusPolicy="0" x="100" font="Sans Serif,9,-1,5,50,0,0,0,0,0" rect="" windowIcon="" MinVolt="0" minimumHeight="200" minimumSize="" Tracks="1"/>
+ 
+SerialPortWidget-20: 
+<item childrenRect="" layoutDirection="0" acceptDrops="false" pos="" normalGeometry="" inputMethodHints="0" windowTitle="Configuracion" minimized="false" palette="" y="0" baseSize="" focus="false" minimumSizeHint="" maximumSize="" windowModified="false" visible="false" contextMenuPolicy="1" enabled="true" childrenRegion="" maximumWidth="450" whatsThis="" frameGeometry="" isActiveWindow="true" width="313" sizeIncrement="" size="" frameSize="" sizePolicy="" windowModality="0" updatesEnabled="true" maximized="false" locale="" toolTip="" objectName="SerialPortWidget-20" itemtype="SerialPort" autoFillBackground="false" fullScreen="false" minimumWidth="0" cursor="" geometry="" mouseTracking="false" windowIconText="" height="141" accessibleDescription="" sizeHint="" windowOpacity="1" SettingsProp="ttyS0,0,3,0,0,0" toolTipDuration="-1" modal="false" statusTip="" windowFilePath="" styleSheet="" maximumHeight="170" accessibleName="" focusPolicy="0" x="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" rect="" windowIcon="" minimumHeight="0" minimumSize=""/>
+ 
+</circuit>
