@@ -179,13 +179,14 @@ win32 {
     LIBS +=  ../resources/bin/libglibc_win.a
     RC_ICONS += ../src/icons/simulide.ico
 }
-unix {
+unix:!macx {
     QMAKE_LIBS += -lelf
     QMAKE_LFLAGS += -no-pie
 }
 
 macx {
     INCLUDEPATH += /usr/local/Cellar/libelf/0.8.13_1/include/libelf/
+    QMAKE_LIBS += /usr/local/Cellar/libelf/0.8.13_1/lib/libelf.a
     DEFINES += __LIBELF_INTERNAL__
 }
 

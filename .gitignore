@@ -1,3 +1,6 @@
+build_XX/
+!build_XX/SimulIDE_Build.pro
+
 
 # Created by https://www.gitignore.io/api/c,qt,c++,linux,macos,windows,qtcreator
 # Edit at https://www.gitignore.io/?templates=c,qt,c++,linux,macos,windows,qtcreator
