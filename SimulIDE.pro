@@ -184,6 +184,11 @@ unix {
     QMAKE_LFLAGS += -no-pie
 }
 
+macx {
+    INCLUDEPATH += /usr/local/Cellar/libelf/0.8.13_1/include/libelf/
+    DEFINES += __LIBELF_INTERNAL__
+}
+
 CONFIG += qt 
 CONFIG += warn_on
 CONFIG += no_qml_debug
