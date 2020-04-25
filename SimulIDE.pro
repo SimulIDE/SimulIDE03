@@ -185,9 +185,11 @@ unix:!macx {
 }
 
 macx {
+    CONFIG += app_bundle
     INCLUDEPATH += /usr/local/Cellar/libelf/0.8.13_1/include/libelf/
     QMAKE_LIBS += /usr/local/Cellar/libelf/0.8.13_1/lib/libelf.a
     DEFINES += __LIBELF_INTERNAL__
+    RC_ICONS += ../src/icons/simulide.ico
 }
 
 CONFIG += qt 

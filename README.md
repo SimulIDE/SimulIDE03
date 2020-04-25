@@ -78,5 +78,6 @@ you need to have Qt and `libelf` installed via HomeBrew
 and the inside the `build_XX` folder run
 
     /System/Volumes/Data/usr/local/Cellar/qt/5.14.1/bin/qmake
+    macdeployqt ./release/SimulIDE_0.3.12-SR8/bin/simulide.app -dmg
 
 
