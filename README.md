@@ -68,3 +68,15 @@ Run time dependencies:
 
 SimuliDE executable is in bin folder.
 No need for installation, place SimulIDE folder wherever you want and run the executable.
+
+## Compiling macOS
+
+you need to have Qt and `libelf` installed via HomeBrew
+
+    brew install qt libelf
+
+and the inside the `build_XX` folder run
+
+    /System/Volumes/Data/usr/local/Cellar/qt/5.14.1/bin/qmake
+
+
