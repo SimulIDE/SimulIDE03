@@ -1,4 +1,5 @@
-# SimulIDE 0.3.10
+== SimulIDE 
+Real-time electronic eircuit eimulator, including PIC, AVR, Arduino simulation. Code Editor & Debugger for Arduino, GcBasic, PIC asm, AVR asm.
 
 Electronic Circuit Simulator
 
